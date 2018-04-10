@@ -29,6 +29,8 @@ public class Game implements Runnable {
     private boolean running;        // to set the game
     private KeyManager keyManager;  // to manage the keyboard
     private Player player;          // to use a player
+    private Room room;
+    
     
     
 
@@ -77,6 +79,7 @@ public class Game implements Runnable {
         display = new Display(title, getWidth(), getHeight());
         Assets.init();
         player = new Player(0, getHeight() - 100, 1, 100, 100, this);
+        room = new Room(0, 0,0,0,0, this);
         display.getJframe().addKeyListener(keyManager);
         
     }
@@ -130,9 +133,8 @@ public class Game implements Runnable {
             display.getCanvas().createBufferStrategy(3);
         } else {
             g = bs.getDrawGraphics();
-            g.setColor(new Color(100, 200, 255));
-            g.fillRect(0, 0, width, height);
             player.render(g);
+            room.render(g);
             bs.show();
             g.dispose();
         }
