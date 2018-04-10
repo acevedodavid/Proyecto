@@ -7,7 +7,7 @@ package are.u.there;
 
 /**
  *
- * @author davidacevedo
+ * @author Rodrigo
  */
 public class AreUThere {
 
@@ -16,6 +16,8 @@ public class AreUThere {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Game g = new Game("Juego", 800, 500);
+        g.start();
     }
     
 }
