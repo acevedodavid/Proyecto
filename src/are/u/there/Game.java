@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author antoniomejorado
+ * @author davidAcevedo
  */
 public class Game implements Runnable {
     private BufferStrategy bs;      // to have several buffers when displaying
@@ -107,9 +107,6 @@ public class Game implements Runnable {
         keyManager.tick();
         while(!paused) {
             player.tick();
-            
-            if()
-            
         }
     }
     
@@ -128,7 +125,8 @@ public class Game implements Runnable {
         else
         {
             g = bs.getDrawGraphics();
-            g.drawImage(Assets.background, 0, 0, width, height, null);
+            g.fillRect(0, 0, getWidth(), getHeight());
+            //g.drawImage(Assets.background, 0, 0, width, height, null);
             player.render(g);
             bs.show();
             g.dispose();
