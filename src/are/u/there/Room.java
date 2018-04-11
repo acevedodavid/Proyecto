@@ -67,6 +67,10 @@ public class Room {
         this.passed = passed;
     }
     
+    public void tick() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+    
     public void render(Graphics g) {
         //g.drawImage(Assets.player, getX(), getY(), getWidth(), getHeight(), null);
         g.setColor(new Color(50,100,150));

@@ -88,7 +88,7 @@ public class Game implements Runnable {
     public void run() {
         init();
         // frames per second
-        int fps = 24;
+        int fps = 30;
         // time for each tick in nano segs
         double timeTick = 1000000000 / fps;
         // initializing delta
@@ -133,8 +133,8 @@ public class Game implements Runnable {
             display.getCanvas().createBufferStrategy(3);
         } else {
             g = bs.getDrawGraphics();
-            player.render(g);
             room.render(g);
+            player.render(g);
             bs.show();
             g.dispose();
         }

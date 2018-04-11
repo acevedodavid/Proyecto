@@ -15,15 +15,21 @@ import java.awt.Graphics;
 public abstract class Item {
     protected int x;        // to store x position
     protected int y;        // to store y position
+    protected int width;    // to store width
+    protected int height;   // to store height
     
     /**
      * Set the initial values to create the item
      * @param x <b>x</b> position of the object
      * @param y <b>y</b> position of the object
+     * @param width <b>y</b> dimension of the object
+     * @param height <b>y</b> dimension of the object
      */
-    public Item(int x, int y) {
+    public Item(int x, int y, int width, int height) {
         this.x = x;
         this.y = y;
+        this.width = width;
+        this.height = height;
     }
 
     /**
@@ -41,6 +47,22 @@ public abstract class Item {
     public int getY() {
         return y;
     }
+    
+     /**
+     * Get y value
+     * @return width
+     */
+    public int getWidth() {
+        return width;
+    }
+    
+     /**
+     * Get y value
+     * @return height 
+     */
+    public int getHeight() {
+        return height;
+    }
 
     /**
      * Set x value
@@ -56,6 +78,22 @@ public abstract class Item {
      */
     public void setY(int y) {
         this.y = y;
+    }
+    
+    /**
+     * Set y value
+     * @param y to modify
+     */
+    public void setWidth(int width) {
+        this.y = width;
+    }
+    
+    /**
+     * Set y value
+     * @param height to modify
+     */
+    public void setHeight(int height) {
+        this.y = height;
     }
     
     /**

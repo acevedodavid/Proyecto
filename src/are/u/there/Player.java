@@ -20,7 +20,7 @@ public class Player extends Item{
     private Game game;
     
     public Player(int x, int y, int direction, int width, int height, Game game) {
-        super(x, y);
+        super(x, y, width, height);
         this.direction = direction;
         this.width = width;
         this.height = height;
@@ -31,24 +31,8 @@ public class Player extends Item{
         return direction;
     }
 
-    public int getWidth() {
-        return width;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
     public void setDirection(int direction) {
         this.direction = direction;
-    }
-
-    public void setWidth(int width) {
-        this.width = width;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
     }
 
     @Override
