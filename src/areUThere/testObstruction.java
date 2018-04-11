@@ -13,9 +13,9 @@ import java.lang.Math;
  *
  * @author davidacevedo
  */
-public class testObstruction extends Item {
+public class TestObstruction extends Item {
 
-    public testObstruction(int x, int y, int width, int height) {
+    public TestObstruction(int x, int y, int width, int height) {
         super(x, y, width, height);
     }
 
